@@ -350,7 +350,7 @@ class Normalizer implements NormalizerInterface
             strtolower(trim($string, '_-#$%')) :
             snake_case(trim($string, '_-#$%'));
 
-        return strtolower(preg_replace('/[^a-zA-Z0-9(^@)]+/', '-', $value));
+        return strtolower(preg_replace('/[^a-zA-Z0-9(-_.:)]+/', '-', $value));
     }
 
     /**
