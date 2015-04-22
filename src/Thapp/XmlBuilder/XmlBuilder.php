@@ -271,7 +271,7 @@ class XMLBuilder
     public function createXML($asstring = false)
     {
         $this->dom = new DOMDocument('1.0', $this->encoding);
-
+        $this->dom->formatOutput = true;
         $xmlRoot = $this->rootName;
         $root = $this->dom->createElement($xmlRoot);
 
